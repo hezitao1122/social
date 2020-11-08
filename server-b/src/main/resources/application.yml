@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: demo-dubbo-server-b
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+dubbo:
+  scan:
+  # dubbo扫描的包路径  组件放哪个包下
+    base-packages: com.seryts.c2c.serverb
+  protocol:
+    # RPC通信的协议
+    name: dubbo
+    # dubbo默认的端口号
+    port: 20880
+    #服务注册的配置
+  registry:
+    address: spring-cloud://local
+
