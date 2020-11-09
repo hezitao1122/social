@@ -31,12 +31,12 @@
         <dependency>
             <groupId>com.zeryts.c2c</groupId>
             <artifactId>common</artifactId>
-            <version>${project-version}</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.zeryts.c2c</groupId>
             <artifactId>server-api</artifactId>
-            <version>${project-version}</version>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
