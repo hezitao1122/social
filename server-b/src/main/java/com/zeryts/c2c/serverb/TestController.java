@@ -1,5 +1,8 @@
 package com.zeryts.c2c.serverb;
 
+import com.zeryts.c2c.inter.ServerB;
+import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -12,4 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class TestController {
+
+    @Reference(
+            version = "1.0.0",
+            interfaceClass = ServerB.class,
+            cluster = "failfast"
+    )
+    private ServerB serverB;
+
+    @GetMapping("/hello")
+    public String hello(){
+        return serverB.get("zeryts");
+    }
+
+
 }

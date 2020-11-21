@@ -16,15 +16,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-dubbo</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.zeryts.c2c</groupId>
             <artifactId>common</artifactId>
             <version>${project-version}</version>
@@ -33,17 +24,6 @@
             <groupId>com.zeryts.c2c</groupId>
             <artifactId>server-api</artifactId>
             <version>${project-version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-alibaba-nacos-discovery</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.cloud</groupId>
-                    <artifactId>spring-cloud-context</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
     </dependencies>
