@@ -1,4 +1,4 @@
-package com.zeryts.c2c.social.govern.report.config;
+package com.zeryts.c2c.social.govern.reward.config.db;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;

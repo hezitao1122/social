@@ -24,19 +24,8 @@
         </dependency>
         <dependency>
             <groupId>com.zeryts.c2c</groupId>
-            <artifactId>server-api</artifactId>
+            <artifactId>social-govern-reviewer-api</artifactId>
             <version>${project-version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.5</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-dubbo</artifactId>
         </dependency>
     </dependencies>
 </project>

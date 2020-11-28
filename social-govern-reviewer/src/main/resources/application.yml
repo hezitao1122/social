@@ -1,0 +1,37 @@
+server:
+  port: 8080
+dubbo:
+  scan:
+    base-packages: com.zeryts.c2c.social.govern.reviewer
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: spring-cloud://localhost
+spring:
+  application:
+    name: social-govern-reviewer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.31.2:8848,192.168.31.2:8847,192.168.31.2:8849
+        port: 8080
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
+    username: root
+    password: hezitao
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initial-size: 1
+    minIdle: 1
+    max-active: 50
+    max-wait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000

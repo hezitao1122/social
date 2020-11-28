@@ -9,7 +9,7 @@
     </parent>
     <artifactId>c2c-social-govern-common</artifactId>
     <version>1.0</version>
-    <name>common</name>
+    <name>c2c-social-govern-common</name>
     <description>公共，如工具类和实体类</description>
 
     <dependencies>
