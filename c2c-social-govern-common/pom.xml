@@ -7,7 +7,7 @@
         <artifactId>c2c-social-govern</artifactId>
         <version>1.0</version>
     </parent>
-    <artifactId>common</artifactId>
+    <artifactId>c2c-social-govern-common</artifactId>
     <version>1.0</version>
     <name>common</name>
     <description>公共，如工具类和实体类</description>
