@@ -4,14 +4,15 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.31.2
+        server-addr: 192.168.31.2:8848,192.168.31.2:8847,192.168.31.2:8849
         port: 8082
 dubbo:
   scan:
-    base-packages: com.seryts.c2c.serverb
+    base-packages: com.zeryts.c2c.serverb
   cloud:
     subscribed-services: demo-dubbo-server-a
   registry:
     address: spring-cloud://localhost
 
-
+server:
+  port: 8080

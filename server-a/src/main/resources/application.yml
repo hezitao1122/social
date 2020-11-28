@@ -2,7 +2,7 @@ server:
   port: 8081
 dubbo:
   scan:
-    base-packages: com.seryts.c2c.servera
+    base-packages: com.zeryts.c2c.servera
   protocol:
     name: dubbo
     port: 20881
@@ -14,5 +14,5 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.31.2:8848
+        server-addr: 192.168.31.2:8848,192.168.31.2:8847,192.168.31.2:8849
         port: 8081
