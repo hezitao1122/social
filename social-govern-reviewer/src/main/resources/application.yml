@@ -14,7 +14,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.31.2:8848,192.168.31.2:8847,192.168.31.2:8849
+        server-addr: 192.168.31.2:8848
         port: 8080
         namespace: public
   datasource:
