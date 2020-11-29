@@ -44,6 +44,8 @@ public class ReportTaskController {
 
     @PostMapping
     public Result<ReportTask> add(@RequestBody ReportTask reportTask){
+
+
         reportTaskService.add(reportTask);
 
         // 调用评审员服务，选择一批评审员
