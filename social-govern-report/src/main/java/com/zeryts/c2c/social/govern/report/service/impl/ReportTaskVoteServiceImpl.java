@@ -37,4 +37,9 @@ public class ReportTaskVoteServiceImpl implements ReportTaskVoteService {
             reportTaskVoteDao.insert(reportTaskVote);
         }
     }
+
+    @Override
+    public void update(ReportTaskVote vote) {
+        reportTaskVoteDao.insertOrUpdate(vote);
+    }
 }

@@ -19,4 +19,13 @@ public interface ReportTaskService {
      * Date: 2020/11/29 10:09
      */
     Boolean add(ReportTask reportTask);
+    /** description:根据主键获取数据
+     * @param id 主键
+     * @return: com.zeryts.c2c.social.govern.report.domain.ReportTask
+     * @Author: zeryts
+     * @email: hezitao12@163.com
+     * Date: 2020/11/29 15:53
+     */
+    ReportTask get(Long id);
+
 }

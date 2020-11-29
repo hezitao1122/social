@@ -1,16 +1,15 @@
 package com.zeryts.c2c.social.govern.report.controller;
 
+import com.zeryts.c2c.social.govern.common.util.Result;
 import com.zeryts.c2c.social.govern.report.domain.ReportTask;
+import com.zeryts.c2c.social.govern.report.domain.ReportTaskVote;
 import com.zeryts.c2c.social.govern.report.service.ReportTaskService;
 import com.zeryts.c2c.social.govern.report.service.ReportTaskVoteService;
 import com.zeryts.c2c.social.govern.reviewer.api.ReviewerService;
 import com.zeryts.c2c.social.govern.reward.api.RewardService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -44,7 +43,7 @@ public class ReportTaskController {
 
 
     @PostMapping
-    public ReportTask add(@RequestBody ReportTask reportTask){
+    public Result<ReportTask> add(@RequestBody ReportTask reportTask){
         reportTaskService.add(reportTask);
 
         // 调用评审员服务，选择一批评审员
@@ -54,7 +53,25 @@ public class ReportTaskController {
         reportTaskVoteService.inittVotes( reportTask.getId(),reviewerIds);
         // 模拟发送push消息给评审员
         System.out.println("模拟发送push消息给评审员.....");
-        return reportTask;
+        return new Result<>(reportTask);
+    }
+    /** description:根据主键获取数据
+     * @param id 主键
+     * @return: com.zeryts.c2c.social.govern.report.domain.ReportTask
+     * @Author: zeryts
+     * @email: hezitao12@163.com
+     * Date: 2020/11/29 15:53
+     */
+    @GetMapping("{id}")
+    public ReportTask get(@PathVariable("id") Long id){
+        return reportTaskService.get(id);
+    }
+    @PostMapping("/vote")
+    public Result<ReportTaskVote> vote(@RequestBody ReportTaskVote vote){
+        Result<ReportTaskVote> result = new Result<>();
+        reportTaskVoteService.update(vote);
+
+        return result.suc().setData(vote);
     }
 
 }

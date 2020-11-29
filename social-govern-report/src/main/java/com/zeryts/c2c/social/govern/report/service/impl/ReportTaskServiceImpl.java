@@ -27,4 +27,9 @@ public class ReportTaskServiceImpl implements ReportTaskService {
         reportTask.setCreateTime(new Date());
         return reportTaskDao.insert(reportTask);
     }
+
+    @Override
+    public ReportTask get(Long id) {
+        return reportTaskDao.selectById(id);
+    }
 }

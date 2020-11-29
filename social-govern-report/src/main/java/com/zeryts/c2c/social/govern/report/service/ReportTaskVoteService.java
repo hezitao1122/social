@@ -22,4 +22,12 @@ public interface ReportTaskVoteService {
      * Date: 2020/11/29 10:09
      */
     void inittVotes(Long reportTaskId , List<Long> reportReviewerIds);
+    /** description: 更新投票信息
+     * @param vote 投票对象
+     * @return: void
+     * @Author: zeryts
+     * @email: hezitao12@163.com
+     * Date: 2020/11/29 16:14
+     */
+    void update(ReportTaskVote vote);
 }
