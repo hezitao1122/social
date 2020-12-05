@@ -15,6 +15,18 @@
 
 
     <dependencies>
+        <!-- Dubbo Spring Cloud -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-dubbo</artifactId>
+        </dependency>
+
+
+        <!-- Seata -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.zeryts.c2c</groupId>
             <artifactId>c2c-social-govern-common</artifactId>

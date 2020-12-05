@@ -13,12 +13,16 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.31.2:8848
-        port: 8081
+        server-addr: 192.168.31.11:8848,192.168.31.12:8848,192.168.31.13:8848
         namespace: public
+    alibaba:
+      seata:
+        tx-service-group: seata-server
+  main:
+    allow-bean-definition-overriding: true
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
-    username: root
+    url: jdbc:mysql://192.168.31.14/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
+    username: admin
     password: hezitao
     driver-class-name: com.mysql.cj.jdbc.Driver
     initialSize: 1
