@@ -44,10 +44,7 @@ public class ReportTaskController {
 
     @PostMapping
     public Result<ReportTask> add(@RequestBody ReportTask reportTask){
-
-
         reportTaskService.add(reportTask);
-
         // 调用评审员服务，选择一批评审员
         List<Long> reviewerIds = reviewerService.selectReviewers(
                 reportTask.getId());
@@ -68,9 +65,26 @@ public class ReportTaskController {
     public ReportTask get(@PathVariable("id") Long id){
         return reportTaskService.get(id);
     }
+
+    /** description:对举报任务进行投票
+     * @param vote 举报任务对象
+     * @return: com.zeryts.c2c.social.govern.common.util.Result<com.zeryts.c2c.social.govern.report.domain.ReportTaskVote>
+     * @Author: zeryts
+     * @email: hezitao12@163.com
+     * Date: 2020/12/5 21:29
+     */
     @PostMapping("/vote")
     public Result<ReportTaskVote> vote(@RequestBody ReportTaskVote vote){
         Result<ReportTaskVote> result = new Result<>();
+        // 本地数据库记录投票
+        reportTaskVoteService.vote(vote);
+        // 调用评审员服务，标记本次投票结束
+        reviewerService.finishVote(vote.getReviewerId(), vote.getReportTaskId());
+
+        // 对举报任务进行归票
+//        Boolean hasFinishedVote = reportTaskVoteService
+//                .calculateVotes(reportTaskId);
+
         reportTaskVoteService.update(vote);
 
         return result.suc().setData(vote);

@@ -15,6 +15,10 @@ spring:
       discovery:
         server-addr: 192.168.31.11:8848,192.168.31.12:8848,192.168.31.13:8848
         namespace: public
+        group: SEATA_GROUP
+      config:
+        server-addr: 192.168.31.11:8848,192.168.31.12:8848,192.168.31.13:8848
+        namespace: public
     alibaba:
       seata:
         tx-service-group: seata-server

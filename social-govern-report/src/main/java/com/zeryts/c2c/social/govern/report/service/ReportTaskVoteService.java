@@ -30,4 +30,22 @@ public interface ReportTaskVoteService {
      * Date: 2020/11/29 16:14
      */
     void update(ReportTaskVote vote);
+
+    /** description:对举报任务进行投票
+     * @param vote 评审信息
+     * @Author: zeryts
+     * @email: hezitao12@163.com
+     * Date: 2020/12/5 21:30
+     */
+    void vote(ReportTaskVote vote);
+
+
+    /** description: 对举报任务进行归票
+     * @param reportTaskId 举报任务ID
+     * @return: java.lang.Boolean
+     * @Author: zeryts
+     * @email: hezitao12@163.com
+     * Date: 2020/12/5 21:44
+     */
+    Boolean calculateVotes(Long reportTaskId);
 }

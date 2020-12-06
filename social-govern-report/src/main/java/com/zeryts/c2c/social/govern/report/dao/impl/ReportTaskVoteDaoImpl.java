@@ -18,4 +18,8 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class ReportTaskVoteDaoImpl extends ServiceImpl<ReportTaskVoteMapper, ReportTaskVote> implements ReportTaskVoteDao {
+    @Override
+    public void updateData(ReportTaskVote vote) {
+
+    }
 }

@@ -3,6 +3,7 @@ package com.zeryts.c2c.social.govern.report.dao;
 import com.baomidou.mybatisplus.service.IService;
 import com.zeryts.c2c.social.govern.report.domain.ReportTask;
 import com.zeryts.c2c.social.govern.report.domain.ReportTaskVote;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,4 +15,9 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface ReportTaskVoteDao extends IService<ReportTaskVote> {
+    @Update("UPDATE REPORT_TASK_VOTE " +
+            "SET VOTE_RESULT=#{voteResult} " +
+            "WHERE REVIEWER_ID=#{reviewerId} " +
+            "AND REPORT_TASK_ID=#{reportTaskId}")
+    void updateData(ReportTaskVote vote);
 }

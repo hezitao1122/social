@@ -12,4 +12,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class ReviewerTaskStatusDAOImpl extends ServiceImpl<ReviewerTaskStatusMapper, ReviewerTaskStatus> implements ReviewerTaskStatusDAO {
 
+    @Override
+    public void updateData(ReviewerTaskStatus reviewerTaskStatus) {
+
+    }
 }

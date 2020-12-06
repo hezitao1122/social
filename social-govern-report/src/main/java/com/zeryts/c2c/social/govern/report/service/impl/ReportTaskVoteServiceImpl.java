@@ -42,4 +42,14 @@ public class ReportTaskVoteServiceImpl implements ReportTaskVoteService {
     public void update(ReportTaskVote vote) {
         reportTaskVoteDao.insertOrUpdate(vote);
     }
+
+    @Override
+    public void vote(ReportTaskVote vote) {
+        reportTaskVoteDao.updateData(vote);
+    }
+
+    @Override
+    public Boolean calculateVotes(Long reportTaskId) {
+        return null;
+    }
 }

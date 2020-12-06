@@ -1,26 +1,23 @@
 server:
-  port: 8080
+  port: 8082
 dubbo:
   scan:
-    base-packages: com.zeryts.c2c.social.govern.reviewer
+    base-packages: com.zeryts.c2c.social.govern.reward
   protocol:
     name: dubbo
-    port: 20880
+    port: 20882
   registry:
     address: spring-cloud://localhost
 spring:
   application:
-    name: social-govern-reviewer
+    name: social-govern-reward
   cloud:
     nacos:
-      discovery:
-        server-addr: 192.168.31.11:8848,192.168.31.12:8848,192.168.31.13:8848
-        namespace: public
+      server-addr: 192.168.31.11:8848,192.168.31.12:8848,192.168.31.13:8848
     alibaba:
       seata:
-        tx-service-group: seata-server
-  main:
-    allow-bean-definition-overriding: true
+        tx-service-group: social-govern-report
+
   datasource:
     url: jdbc:mysql://192.168.31.14:3306/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
     username: admin
