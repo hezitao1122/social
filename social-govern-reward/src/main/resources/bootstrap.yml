@@ -13,16 +13,17 @@ spring:
     name: social-govern-reward
   cloud:
     nacos:
-      server-addr: 192.168.31.11:8848,192.168.31.12:8848,192.168.31.13:8848
-    alibaba:
+      server-addr: 192.9.200.75:8848
+      discovery:
+        cluster-name: default
+        group: SEATA_GROUP
       seata:
-        tx-service-group: social-govern-report
-
+        tx-service-group: my_test_tx_group
   datasource:
-    url: jdbc:mysql://192.168.31.14:3306/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
-    username: admin
-    password: hezitao
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.9.200.95:3306/seata?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
     initialSize: 1
     minIdle: 1
     maxActive: 50
@@ -37,3 +38,25 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     filters: stat,wall,log4j
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: my_test_tx_group
+  enable-auto-data-source-proxy: true
+  config:
+    type: nacos
+    nacos:
+      namespace:
+      serverAddr: 192.9.200.75:8848
+      group: SEATA_GROUP
+      username: "nacos"
+      password: "nacos"
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 192.9.200.75:8848
+      group: SEATA_GROUP
+      namespace:
+      username: "nacos"
+      password: "nacos"
