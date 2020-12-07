@@ -15,13 +15,26 @@
 
 
     <dependencies>
-        <!-- Dubbo Spring Cloud -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-alibaba-dubbo</artifactId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-context</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-
-
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-context</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <!-- Seata -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
