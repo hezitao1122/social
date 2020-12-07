@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 18080
 dubbo:
   scan:
     base-packages: com.zeryts.c2c.social.govern.reward
@@ -13,17 +13,18 @@ spring:
     name: social-govern-reward
   cloud:
     nacos:
-      server-addr: 192.9.200.75:8848
+      server-addr: 192.168.31.11:8848,192.168.31.12:8848,192.168.31.13:8848
       discovery:
         cluster-name: default
         group: SEATA_GROUP
+    alibaba:
       seata:
-        tx-service-group: my_test_tx_group
+        tx-service-group: social-govern-report
   datasource:
-    url: jdbc:mysql://192.9.200.95:3306/seata?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.31.14:3306/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
+    username: admin
+    password: hezitao
+    driver-class-name: com.mysql.cj.jdbc.Driver
     initialSize: 1
     minIdle: 1
     maxActive: 50
@@ -41,22 +42,17 @@ spring:
 seata:
   enabled: true
   application-id: ${spring.application.name}
-  tx-service-group: my_test_tx_group
+  tx-service-group: social-govern-report
   enable-auto-data-source-proxy: true
   config:
     type: nacos
     nacos:
-      namespace:
-      serverAddr: 192.9.200.75:8848
+      namespace: public
+      serverAddr: ${spring.cloud.nacos.server-addr}
       group: SEATA_GROUP
-      username: "nacos"
-      password: "nacos"
   registry:
     type: nacos
     nacos:
-      application: seata-server
-      server-addr: 192.9.200.75:8848
+      application: ${spring.application.name}
+      server-addr: ${spring.cloud.nacos.server-addr}
       group: SEATA_GROUP
-      namespace:
-      username: "nacos"
-      password: "nacos"
