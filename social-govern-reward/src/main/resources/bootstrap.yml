@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 18080
 dubbo:
   scan:
     base-packages: com.zeryts.c2c.social.govern.reward
