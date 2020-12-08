@@ -1,12 +1,12 @@
 seata:
   enabled: true
   application-id: social-govern-reward
-  tx-service-group: my_test_tx_group
+  tx-service-group: social-govern-report
   config:
     type: nacos
     nacos:
       namespace:
-      serverAddr: 192.9.200.75:8848
+      serverAddr: ${spring.cloud.nacos.server-addr}
       group: SEATA_GROUP
       username: "nacos"
       password: "nacos"
@@ -14,7 +14,7 @@ seata:
     type: nacos
     nacos:
       application: seata-server
-      serverAddr: 192.9.200.75:8848
+      serverAddr: ${spring.cloud.nacos.server-addr}
       group: SEATA_GROUP
       namespace:
       username: "nacos"
