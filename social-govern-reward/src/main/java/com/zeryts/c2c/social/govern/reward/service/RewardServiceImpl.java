@@ -1,6 +1,7 @@
 package com.zeryts.c2c.social.govern.reward.service;
 
 import com.zeryts.c2c.social.govern.reward.api.RewardService;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.apache.dubbo.config.annotation.Service;
 
 /**
@@ -10,7 +11,7 @@ import org.apache.dubbo.config.annotation.Service;
  * @author: zeryts
  * @date: 2020/11/29-7:15
  */
-@Service(
+@DubboService(
         version = "1.0.0",
         interfaceClass = RewardService.class,
         cluster = "failfast",

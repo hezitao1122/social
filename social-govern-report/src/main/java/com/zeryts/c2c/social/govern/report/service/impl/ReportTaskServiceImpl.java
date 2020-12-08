@@ -25,11 +25,11 @@ public class ReportTaskServiceImpl implements ReportTaskService {
     @Override
     public Boolean add(ReportTask reportTask) {
         reportTask.setCreateTime(new Date());
-        return reportTaskDao.insert(reportTask);
+        return reportTaskDao.save(reportTask);
     }
 
     @Override
     public ReportTask get(Long id) {
-        return reportTaskDao.selectById(id);
+        return reportTaskDao.getById(id);
     }
 }

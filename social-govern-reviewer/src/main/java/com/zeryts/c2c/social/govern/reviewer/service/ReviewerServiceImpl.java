@@ -5,6 +5,7 @@ import com.zeryts.c2c.social.govern.reviewer.api.ReviewerService;
 import com.zeryts.c2c.social.govern.reviewer.dao.ReviewerTaskStatusDAO;
 import com.zeryts.c2c.social.govern.reviewer.domain.ReviewerTaskStatus;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,7 +20,7 @@ import java.util.List;
  * @projectName c2c-social-govern
  * @date 2020/11/8 20:56
  */
-@Service(
+@DubboService(
         version = "1.0.0",
         interfaceClass = ReviewerService.class,
         cluster = "failfast",
@@ -51,7 +52,7 @@ public class ReviewerServiceImpl implements ReviewerService {
             reviewerTaskStatus.setReviewerId(reviewerId);
             reviewerTaskStatus.setReportTaskId(reportTaskId);
             reviewerTaskStatus.setStatus(ReviewerStatucEnum.PROCESSING.getKey());
-            dao.insert(reviewerTaskStatus);
+            dao.save(reviewerTaskStatus);
         }
         return null;
     }

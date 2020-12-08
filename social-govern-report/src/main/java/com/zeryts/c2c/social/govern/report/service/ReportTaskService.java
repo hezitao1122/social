@@ -1,6 +1,5 @@
 package com.zeryts.c2c.social.govern.report.service;
 
-import com.baomidou.mybatisplus.service.IService;
 import com.zeryts.c2c.social.govern.report.domain.ReportTask;
 
 /**

@@ -1,6 +1,6 @@
 package com.zeryts.c2c.social.govern.report.mapper;
 
-import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zeryts.c2c.social.govern.report.domain.ReportTask;
 import org.apache.ibatis.annotations.Mapper;
 

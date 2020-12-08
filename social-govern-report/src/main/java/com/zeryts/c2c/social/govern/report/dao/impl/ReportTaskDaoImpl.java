@@ -1,6 +1,6 @@
 package com.zeryts.c2c.social.govern.report.dao.impl;
 
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zeryts.c2c.social.govern.report.dao.ReportTaskDao;
 import com.zeryts.c2c.social.govern.report.domain.ReportTask;
 import com.zeryts.c2c.social.govern.report.mapper.ReportTaskMapper;

@@ -34,13 +34,13 @@ public class ReportTaskVoteServiceImpl implements ReportTaskVoteService {
             reportTaskVote.setReportTaskId(reportTaskId);
             reportTaskVote.setVoteResult(ReportTaskVoteEnum.UNKNOWN.getKey());
             reportTaskVote.setCreateTime(new Date());
-            reportTaskVoteDao.insert(reportTaskVote);
+            reportTaskVoteDao.save(reportTaskVote);
         }
     }
 
     @Override
     public void update(ReportTaskVote vote) {
-        reportTaskVoteDao.insertOrUpdate(vote);
+        reportTaskVoteDao.saveOrUpdate(vote);
     }
 
     @Override

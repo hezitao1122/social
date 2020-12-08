@@ -1,8 +1,11 @@
 server:
-  port: 8081
+  port: 18080
 dubbo:
   scan:
     base-packages: com.zeryts.c2c.social.govern.report
+  protocol:
+    name: dubbo
+    port: 20881
   registry:
     address: spring-cloud://localhost
   cloud:
@@ -10,25 +13,16 @@ dubbo:
 spring:
   application:
     name: social-govern-report
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 192.168.31.11:8848,192.168.31.12:8848,192.168.31.13:8848
-        namespace: public
-        group: SEATA_GROUP
-      config:
-        server-addr: 192.168.31.11:8848,192.168.31.12:8848,192.168.31.13:8848
-        namespace: public
-    alibaba:
-      seata:
-        tx-service-group: seata-server
   main:
     allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      server-addr: 192.9.200.75:8848
   datasource:
-    url: jdbc:mysql://192.168.31.14/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
-    username: admin
-    password: hezitao
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.9.200.95:3306/seata?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
     initialSize: 1
     minIdle: 1
     maxActive: 50

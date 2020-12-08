@@ -7,7 +7,7 @@ import com.zeryts.c2c.social.govern.report.service.ReportTaskService;
 import com.zeryts.c2c.social.govern.report.service.ReportTaskVoteService;
 import com.zeryts.c2c.social.govern.reviewer.api.ReviewerService;
 import com.zeryts.c2c.social.govern.reward.api.RewardService;
-import org.apache.dubbo.config.annotation.Reference;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,13 +28,13 @@ public class ReportTaskController {
     @Autowired
     private ReportTaskVoteService reportTaskVoteService;
 
-    @Reference(
+    @DubboReference(
             version = "1.0.0",
             interfaceClass = ReviewerService.class,
             cluster = "failfast"
     )
     private ReviewerService reviewerService;
-    @Reference(
+    @DubboReference(
             version = "1.0.0",
             interfaceClass = RewardService.class,
             cluster = "failfast"
