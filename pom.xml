@@ -18,6 +18,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
         <seata.version>1.4.0</seata.version>
+        <sentinel.version>1.8.1-SNAPSHOT</sentinel.version>
+        <maven.deploy.version>2.8.2</maven.deploy.version>
     </properties>
 
     <modules>
@@ -27,6 +29,7 @@
         <module>social-govern-reviewer-api</module>
         <module>social-govern-reward</module>
         <module>social-govern-reward-api</module>
+        <module>sentinel-dashboard</module>
     </modules>
 
     <dependencies>
@@ -165,6 +168,14 @@
                         <artifactId>seata-spring-boot-starter</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-parent</artifactId>
+                <version>${sentinel.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
