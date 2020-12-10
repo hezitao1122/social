@@ -1,0 +1,19 @@
+server:
+  port: 9999
+  servlet:
+    session:
+      cookie:
+        name: sentinel_dashboard_cookie
+spring:
+  application:
+    name: sentinel-dashboard
+  hppt:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      server-addr: 192.168.31.11:8848,192.168.31.12:8848,192.168.31.13:8848
