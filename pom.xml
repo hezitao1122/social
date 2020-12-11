@@ -21,6 +21,7 @@
         <seata.version>1.4.0</seata.version>
         <sentinel.version>1.8.1-SNAPSHOT</sentinel.version>
         <maven.deploy.version>2.8.2</maven.deploy.version>
+        <apollo.version>1.5.0</apollo.version>
         <http-clent.version>4.5.5</http-clent.version>
     </properties>
 
@@ -49,7 +50,7 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-            <version>${http-clent.version}</version>
+            <version>4.5.5</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -143,6 +144,14 @@
                 <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
                 <version>${alibaba.cloud.version}</version>
             </dependency>
+
+            <!-- apollo -->
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>${apollo.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>io.seata</groupId>
                 <artifactId>seata-spring-boot-starter</artifactId>
