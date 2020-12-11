@@ -4,12 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.zeryts.c2c</groupId>
     <artifactId>c2c-social-govern</artifactId>
-    <version>1.0</version>
+    <version>${project.version}</version>
     <name>c2c-social-govern</name>
     <description>C2C电商平台</description>
     <packaging>pom</packaging>
 
     <properties>
+        <project.version>1.0</project.version>
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
         <spring-boot.version>2.3.6.RELEASE</spring-boot.version>
@@ -20,10 +21,11 @@
         <seata.version>1.4.0</seata.version>
         <sentinel.version>1.8.1-SNAPSHOT</sentinel.version>
         <maven.deploy.version>2.8.2</maven.deploy.version>
+        <http-clent.version>4.5.5</http-clent.version>
     </properties>
 
     <modules>
-        <module>c2c-social-govern-common</module>
+        <module>social-govern-common</module>
         <module>social-govern-report</module>
         <module>social-govern-reviewer</module>
         <module>social-govern-reviewer-api</module>
@@ -47,7 +49,7 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-            <version>4.5.5</version>
+            <version>${http-clent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -141,7 +143,6 @@
                 <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
                 <version>${alibaba.cloud.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>io.seata</groupId>
                 <artifactId>seata-spring-boot-starter</artifactId>

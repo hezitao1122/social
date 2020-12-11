@@ -100,7 +100,7 @@
         </dependency>
         <dependency>
             <groupId>com.zeryts.c2c</groupId>
-            <artifactId>c2c-social-govern-common</artifactId>
+            <artifactId>social-govern-common</artifactId>
             <version>${project-version}</version>
         </dependency>
         <dependency>

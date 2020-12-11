@@ -7,9 +7,10 @@
         <artifactId>c2c-social-govern</artifactId>
         <version>1.0</version>
     </parent>
-    <artifactId>c2c-social-govern-common</artifactId>
+    <packaging>pom</packaging>
+    <artifactId>social-govern-common</artifactId>
     <version>1.0</version>
-    <name>c2c-social-govern-common</name>
+    <name>social-govern-common</name>
     <description>公共，如工具类和实体类</description>
 
     <dependencies>
