@@ -10,8 +10,8 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>c2c-govern-common-bom</groupId>
-	<artifactId>c2c-govern-common-bom</artifactId>
+	<groupId>social-common-bom</groupId>
+	<artifactId>social-common-bom</artifactId>
 	<packaging>pom</packaging>
 	<version>${project.version}</version>
 	<description>c2c-social-govern 公共版本控制</description>
@@ -44,6 +44,7 @@
 		<cloud.plugin.version>1.1.1</cloud.plugin.version>
 		<javaformat.plugin.version>0.0.23</javaformat.plugin.version>
 		<docker.plugin.version>0.33.0</docker.plugin.version>
+		<apollo.version>1.5.0</apollo.version>
 	</properties>
 
 
@@ -51,6 +52,61 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<!-- nacos 作为服务注册中心 -->
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+				<version>${alibaba.cloud.version}</version>
+			</dependency>
+			<!-- nacos 作为配置中心 -->
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+				<version>${alibaba.cloud.version}</version>
+			</dependency>
+			<!-- apollo -->
+			<dependency>
+				<groupId>com.ctrip.framework.apollo</groupId>
+				<artifactId>apollo-client</artifactId>
+				<version>${apollo.version}</version>
+			</dependency>
+			<!-- seata依赖 -->
+			<dependency>
+				<groupId>io.seata</groupId>
+				<artifactId>seata-spring-boot-starter</artifactId>
+				<version>${seata.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.alibaba</groupId>
+						<artifactId>druid</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+				<version>${alibaba.cloud.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>io.seata</groupId>
+						<artifactId>seata-spring-boot-starter</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba.csp</groupId>
+				<artifactId>sentinel-parent</artifactId>
+				<version>${sentinel.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.zeryts.c2c</groupId>
+				<artifactId>social-common-sentinel</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+
 			<dependency>
 				<groupId>com.zeryts.c2c</groupId>
 				<artifactId>social-govern-common-core</artifactId>
