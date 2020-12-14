@@ -8,12 +8,7 @@
         <version>1.0</version>
     </parent>
     <artifactId>social-govern-reviewer-api</artifactId>
-    <version>1.0</version>
     <name>social-govern-reviewer-api</name>
     <description>举报服务的api项目</description>
-
-    <dependencies>
-
-    </dependencies>
 
 </project>

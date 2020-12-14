@@ -14,8 +14,8 @@
 	<description>sentinel服务降级熔断、限流组件</description>
 	<dependencies>
 		<dependency>
-			<groupId>com.pig4cloud</groupId>
-			<artifactId>pigx-common-core</artifactId>
+			<groupId>com.zeryts.c2c</groupId>
+			<artifactId>social-common-core</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>

@@ -1,12 +1,11 @@
 package com.zeryts.c2c.social.govern.reviewer.service;
 
-import com.zeryts.c2c.social.govern.common.enums.ReviewerStatucEnum;
+import com.zeryts.c2c.common.core.enums.ReviewerStatucEnum;
 import com.zeryts.c2c.social.govern.reviewer.api.ReviewerService;
 import com.zeryts.c2c.social.govern.reviewer.dao.ReviewerTaskStatusDAO;
 import com.zeryts.c2c.social.govern.reviewer.domain.ReviewerTaskStatus;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboService;
-import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;

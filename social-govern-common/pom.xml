@@ -9,12 +9,12 @@
     </parent>
     <packaging>pom</packaging>
     <artifactId>social-govern-common</artifactId>
-    <version>1.0</version>
     <name>social-govern-common</name>
     <description>公共，如工具类和实体类</description>
 
     <modules>
         <module>social-common-bom</module>
         <module>social-common-sentinel</module>
+        <module>social-common-core</module>
     </modules>
 </project>

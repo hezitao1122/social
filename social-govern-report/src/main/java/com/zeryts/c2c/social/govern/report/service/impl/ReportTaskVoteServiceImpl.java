@@ -1,11 +1,8 @@
 package com.zeryts.c2c.social.govern.report.service.impl;
 
-import com.zeryts.c2c.social.govern.common.enums.ReportTaskVoteEnum;
-import com.zeryts.c2c.social.govern.report.dao.ReportTaskDao;
+import com.zeryts.c2c.common.core.enums.ReportTaskVoteEnum;
 import com.zeryts.c2c.social.govern.report.dao.ReportTaskVoteDao;
-import com.zeryts.c2c.social.govern.report.domain.ReportTask;
 import com.zeryts.c2c.social.govern.report.domain.ReportTaskVote;
-import com.zeryts.c2c.social.govern.report.service.ReportTaskService;
 import com.zeryts.c2c.social.govern.report.service.ReportTaskVoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

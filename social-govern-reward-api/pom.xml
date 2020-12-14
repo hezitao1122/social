@@ -8,12 +8,6 @@
         <version>1.0</version>
     </parent>
     <artifactId>social-govern-reward-api</artifactId>
-    <version>1.0</version>
     <name>social-govern-reward-api</name>
     <description>奖励服务的api项目</description>
-
-    <dependencies>
-
-    </dependencies>
-
 </project>

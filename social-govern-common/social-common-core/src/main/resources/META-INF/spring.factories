@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.zeryts.c2c.common.core.config.JacksonConfig,\
+  com.zeryts.c2c.common.core.config.MessageSourceConfig,\
+  com.zeryts.c2c.common.core.config.RestTemplateConfig,\
+  com.zeryts.c2c.common.core.util.SpringContextHolder

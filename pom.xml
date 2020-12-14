@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.zeryts.c2c</groupId>
     <artifactId>c2c-social-govern</artifactId>
-    <version>${project.version}</version>
+    <version>1.0</version>
     <name>c2c-social-govern</name>
     <description>C2C电商平台</description>
     <packaging>pom</packaging>
@@ -16,13 +16,20 @@
         <spring-boot.version>2.3.6.RELEASE</spring-boot.version>
         <project-version>1.0</project-version>
         <alibaba.cloud.version>2.2.3.RELEASE</alibaba.cloud.version>
-        <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.version>3.8.1</maven.compiler.version>
         <seata.version>1.4.0</seata.version>
         <sentinel.version>1.8.1-SNAPSHOT</sentinel.version>
         <maven.deploy.version>2.8.2</maven.deploy.version>
         <apollo.version>1.5.0</apollo.version>
         <http-clent.version>4.5.5</http-clent.version>
+        <ttl.version>2.11.4</ttl.version>
+        <hutool.version>5.5.1</hutool.version>
+
+        <spring.checkstyle.version>0.0.23</spring.checkstyle.version>
+        <docker.plugin.version>0.33.0</docker.plugin.version>
+        <git.commit.version>2.2.5</git.commit.version>
     </properties>
 
     <modules>
@@ -36,6 +43,7 @@
     </modules>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter</artifactId>
@@ -115,6 +123,8 @@
                 <groupId>com.zeryts.c2c</groupId>
                 <artifactId>social-common-bom</artifactId>
                 <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <!-- spring-boot依赖 -->
             <dependency>
@@ -148,17 +158,21 @@
 
 
     <build>
+        <!-- 打包相关的依赖信息 -->
         <finalName>${project.name}</finalName>
-
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <pluginManagement>
             <plugins>
+                <!--spring boot 默认插件-->
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
-                    <configuration>
-                        <finalName>${project.build.finalName}</finalName>
-                    </configuration>
                     <executions>
                         <execution>
                             <goals>
@@ -170,19 +184,29 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <!--代码格式插件，默认使用spring 规则-->
             <plugin>
+                <groupId>io.spring.javaformat</groupId>
+                <artifactId>spring-javaformat-maven-plugin</artifactId>
+                <version>${spring.checkstyle.version}</version>
+            </plugin>
+            <!--代码编译指定版本插件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>${maven.compiler.version}</version>
                 <configuration>
                     <target>${maven.compiler.target}</target>
                     <source>${maven.compiler.source}</source>
                     <encoding>UTF-8</encoding>
+                    <skip>true</skip>
                 </configuration>
             </plugin>
+            <!--打包关联最新 git commit 信息插件-->
             <plugin>
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
-                <version>2.2.5</version>
+                <version>${git.commit.version}</version>
             </plugin>
         </plugins>
     </build>

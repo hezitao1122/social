@@ -8,7 +8,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>social-govern-reviewer</artifactId>
-    <version>1.0</version>
     <name>social-govern-reviewer</name>
     <description>评审员服务</description>
 
@@ -36,13 +35,11 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.1.6</version>
         </dependency>
 
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.3.1</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -94,8 +91,7 @@
 
         <dependency>
             <groupId>com.zeryts.c2c</groupId>
-            <artifactId>c2c-social-govern-common</artifactId>
-            <version>${project-version}</version>
+            <artifactId>social-common-core</artifactId>
         </dependency>
         <dependency>
             <groupId>com.zeryts.c2c</groupId>
@@ -103,4 +99,12 @@
             <version>${project-version}</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

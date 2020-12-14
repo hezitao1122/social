@@ -8,7 +8,7 @@
         <version>1.0</version>
     </parent>
     <artifactId>social-govern-report</artifactId>
-    <version>1.0</version>
+    <version>${project.version}</version>
     <name>social-govern-report</name>
     <description>举报服务</description>
     <packaging>jar</packaging>
@@ -39,13 +39,11 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.1.6</version>
         </dependency>
 
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.3.1</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -106,13 +104,21 @@
         </dependency>
         <dependency>
             <groupId>com.zeryts.c2c</groupId>
-            <artifactId>c2c-social-govern-common</artifactId>
-            <version>${project-version}</version>
+            <artifactId>social-common-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

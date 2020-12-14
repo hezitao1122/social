@@ -1,6 +1,6 @@
 package com.zeryts.c2c.social.govern.report.controller;
 
-import com.zeryts.c2c.social.govern.common.util.Result;
+import com.zeryts.c2c.common.core.util.Result;
 import com.zeryts.c2c.social.govern.report.domain.ReportTask;
 import com.zeryts.c2c.social.govern.report.domain.ReportTaskVote;
 import com.zeryts.c2c.social.govern.report.service.ReportTaskService;

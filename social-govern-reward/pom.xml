@@ -8,17 +8,9 @@
         <version>1.0</version>
     </parent>
     <artifactId>social-govern-reward</artifactId>
-    <version>1.0</version>
     <name>social-govern-reward</name>
     <description>奖励服务</description>
     <packaging>jar</packaging>
-
-    <properties>
-        <java.version>1.8</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    </properties>
-
     <dependencies>
         <!-- 容器 -->
         <dependency>
@@ -80,13 +72,11 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.1.6</version>
         </dependency>
         <!-- mybatis-plus -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.3.1</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -106,8 +96,7 @@
         </dependency>
         <dependency>
             <groupId>com.zeryts.c2c</groupId>
-            <artifactId>social-govern-common</artifactId>
-            <version>${project-version}</version>
+            <artifactId>social-common-core</artifactId>
         </dependency>
         <dependency>
             <groupId>com.zeryts.c2c</groupId>
@@ -120,18 +109,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <fork>true</fork>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
             </plugin>
         </plugins>
     </build>
