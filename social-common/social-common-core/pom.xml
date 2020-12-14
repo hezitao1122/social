@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.zeryts.c2c</groupId>
-		<artifactId>social-govern-common</artifactId>
+		<artifactId>social-common</artifactId>
 		<version>1.0</version>
 	</parent>
 
