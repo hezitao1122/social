@@ -7,7 +7,6 @@
 		<artifactId>social-common</artifactId>
 		<version>1.0</version>
 	</parent>
-
 	<artifactId>social-common-core</artifactId>
 	<packaging>jar</packaging>
 	<description>social 公共工具类核心包</description>
@@ -18,13 +17,11 @@
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
-			<version>${hutool.version}</version>
 		</dependency>
 		<!--mvc 相关配置-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<scope>provided</scope>
 		</dependency>
 		<!--server-api-->
 		<dependency>
@@ -45,7 +42,6 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>transmittable-thread-local</artifactId>
-			<version>${ttl.version}</version>
 		</dependency>
 		<!--swagger 依赖-->
 		<dependency>

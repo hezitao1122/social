@@ -1,7 +1,7 @@
 package com.zeryts.c2c.common.core.util;
 
 /**
- * @author lengleng
+ * @author zeryts
  * @date 2020/9/29
  * <p>
  * 字符串处理，方便其他模块解耦处理

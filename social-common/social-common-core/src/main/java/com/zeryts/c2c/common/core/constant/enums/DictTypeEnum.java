@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * @author lengleng
+ * @author zeryts
  * @date 2019-05-16
  * <p>
  * 字典类型

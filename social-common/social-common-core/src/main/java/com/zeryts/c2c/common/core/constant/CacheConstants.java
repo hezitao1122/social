@@ -1,7 +1,7 @@
 package com.zeryts.c2c.common.core.constant;
 
 /**
- * @author lengleng
+ * @author zeryts
  * @date 2019-04-28
  * <p>
  * 缓存的key 常量

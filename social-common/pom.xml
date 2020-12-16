@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.zeryts.c2c</groupId>
-        <artifactId>c2c-social-govern</artifactId>
+        <artifactId>social</artifactId>
         <version>1.0</version>
     </parent>
     <packaging>pom</packaging>
@@ -16,5 +16,6 @@
         <module>social-common-bom</module>
         <module>social-common-sentinel</module>
         <module>social-common-core</module>
+        <module>social-common-swagger</module>
     </modules>
 </project>
