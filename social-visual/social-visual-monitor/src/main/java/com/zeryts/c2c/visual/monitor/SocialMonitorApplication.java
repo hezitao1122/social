@@ -11,10 +11,10 @@ import org.springframework.cloud.client.SpringCloudApplication;
  */
 @EnableAdminServer
 @SpringCloudApplication
-public class PigxMonitorApplication {
+public class SocialMonitorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PigxMonitorApplication.class, args);
+		SpringApplication.run(SocialMonitorApplication.class, args);
 	}
 
 }

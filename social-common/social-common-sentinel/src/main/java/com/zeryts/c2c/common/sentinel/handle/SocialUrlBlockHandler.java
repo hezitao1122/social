@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  * 降级 限流策略
  */
 @Slf4j
-public class PigxUrlBlockHandler implements BlockExceptionHandler {
+public class SocialUrlBlockHandler implements BlockExceptionHandler {
 
 	@Override
 	public void handle(HttpServletRequest request, HttpServletResponse response, BlockException e) throws Exception {

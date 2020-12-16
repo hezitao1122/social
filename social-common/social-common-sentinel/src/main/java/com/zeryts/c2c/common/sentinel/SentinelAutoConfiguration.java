@@ -6,8 +6,8 @@ import com.alibaba.cloud.sentinel.feign.SentinelFeignAutoConfiguration;
 import com.alibaba.csp.sentinel.adapter.spring.webmvc.callback.BlockExceptionHandler;
 import com.alibaba.csp.sentinel.adapter.spring.webmvc.callback.RequestOriginParser;
 import com.zeryts.c2c.common.sentinel.feign.SocialSentinelFeign;
-import com.zeryts.c2c.common.sentinel.handle.PigxUrlBlockHandler;
-import com.zeryts.c2c.common.sentinel.parser.PigxHeaderRequestOriginParser;
+import com.zeryts.c2c.common.sentinel.handle.SocialUrlBlockHandler;
+import com.zeryts.c2c.common.sentinel.parser.SocialHeaderRequestOriginParser;
 import feign.Feign;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -37,13 +37,13 @@ public class SentinelAutoConfiguration {
 	@Bean
 	@ConditionalOnMissingBean
 	public BlockExceptionHandler blockExceptionHandler() {
-		return new PigxUrlBlockHandler();
+		return new SocialUrlBlockHandler();
 	}
 
 	@Bean
 	@ConditionalOnMissingBean
 	public RequestOriginParser requestOriginParser() {
-		return new PigxHeaderRequestOriginParser();
+		return new SocialHeaderRequestOriginParser();
 	}
 
 }

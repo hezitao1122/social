@@ -34,6 +34,6 @@ import java.lang.annotation.*;
 @Inherited
 @EnableSwagger2
 @Import({ SwaggerAutoConfiguration.class, GatewaySwaggerAutoConfiguration.class })
-public @interface EnablePigxSwagger2 {
+public @interface EnableSocialSwagger2 {
 
 }

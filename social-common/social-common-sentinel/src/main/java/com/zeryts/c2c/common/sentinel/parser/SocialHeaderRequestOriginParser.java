@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
  * <p>
  * sentinel 请求头解析判断
  */
-public class PigxHeaderRequestOriginParser implements RequestOriginParser {
+public class SocialHeaderRequestOriginParser implements RequestOriginParser {
 
 	/**
 	 * 请求头获取allow
