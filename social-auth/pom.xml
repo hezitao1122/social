@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.zeryts.c2c</groupId>
+		<artifactId>social</artifactId>
+		<version>1.0</version>
+	</parent>
+
+	<artifactId>social-auth</artifactId>
+	<packaging>jar</packaging>
+
+	<description>social 认证授权中心，基于 spring security oAuth2</description>
+
+	<dependencies>
+		<!--注册中心客户端-->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+		</dependency>
+		<!--配置中心客户端-->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+		</dependency>
+		<!--log-->
+		<dependency>
+			<groupId>com.zeryts.c2c</groupId>
+			<artifactId>social-common-log</artifactId>
+		</dependency>
+		<!--security-->
+		<dependency>
+			<groupId>com.zeryts.c2c</groupId>
+			<artifactId>social-common-security</artifactId>
+		</dependency>
+		<!--feign 依赖-->
+		<dependency>
+			<groupId>com.zeryts.c2c</groupId>
+			<artifactId>social-common-feign</artifactId>
+		</dependency>
+		<!--mysql 驱动-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!--缓存操作-->
+		<dependency>
+			<groupId>com.zeryts.c2c</groupId>
+			<artifactId>social-common-data</artifactId>
+		</dependency>
+		<!--sentinel 依赖-->
+		<dependency>
+			<groupId>com.zeryts.c2c</groupId>
+			<artifactId>social-common-sentinel</artifactId>
+		</dependency>
+		<!--路由控制-->
+		<dependency>
+			<groupId>com.zeryts.c2c</groupId>
+			<artifactId>social-common-gray</artifactId>
+		</dependency>
+		<!--JDBC相关-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<!-- druid 连接池 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+		</dependency>
+		<!--freemarker-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+		<!--web 模块-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!--undertow容器-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-undertow</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<configuration>
+					<skip>false</skip>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

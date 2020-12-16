@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.zeryts.c2c</groupId>
+		<artifactId>social-common</artifactId>
+		<version>1.0</version>
+	</parent>
+
+	<artifactId>social-common-security</artifactId>
+	<packaging>jar</packaging>
+
+	<description>social 安全工具类</description>
+
+
+	<dependencies>
+		<!--工具类核心包-->
+		<dependency>
+			<groupId>com.zeryts.c2c</groupId>
+			<artifactId>social-common-core</artifactId>
+		</dependency>
+		<!--安全模块 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-oauth2</artifactId>
+		</dependency>
+		<!--feign-->
+		<dependency>
+			<groupId>io.github.openfeign</groupId>
+			<artifactId>feign-core</artifactId>
+		</dependency>
+		<!--aop-->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+		</dependency>
+		<!--缓存依赖-->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-redis</artifactId>
+		</dependency>
+		<!--upms fegin 调用相关工具类-->
+        <dependency>
+            <groupId>com.zeryts.c2c</groupId>
+            <artifactId>social-upms-api</artifactId>
+        </dependency>
+    </dependencies>
+</project>

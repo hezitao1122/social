@@ -8,7 +8,6 @@
         <version>1.0</version>
     </parent>
     <artifactId>social-govern-report</artifactId>
-    <version>${project.version}</version>
     <name>social-govern-report</name>
     <description>举报服务</description>
     <packaging>jar</packaging>

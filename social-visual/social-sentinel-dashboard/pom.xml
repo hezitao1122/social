@@ -10,6 +10,7 @@
 
 	<artifactId>social-sentinel-dashboard</artifactId>
 	<packaging>jar</packaging>
+	<description>sentinel 的控制台模块 , 基于spring-alibaba-sentinel</description>
 
 	<dependencies>
 		<!-- nacos 作为服务注册中心 -->

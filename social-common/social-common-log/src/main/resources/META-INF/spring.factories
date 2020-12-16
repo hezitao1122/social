@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    com.zeryts.c2c.common.log.LogAutoConfiguration
+org.springframework.context.ApplicationContextInitializer=\
+    com.zeryts.c2c.common.log.init.ApplicationLoggerInitializer

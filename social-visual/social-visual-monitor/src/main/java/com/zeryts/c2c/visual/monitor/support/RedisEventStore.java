@@ -1,7 +1,7 @@
 package com.zeryts.c2c.visual.monitor.support;
 
-import cn.agree.amap.common.core.constant.CacheConstants;
 import cn.hutool.core.util.StrUtil;
+import com.zeryts.c2c.common.core.constant.CacheConstants;
 import de.codecentric.boot.admin.server.domain.events.InstanceEvent;
 import de.codecentric.boot.admin.server.eventstore.InMemoryEventStore;
 import lombok.AllArgsConstructor;

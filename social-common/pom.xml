@@ -17,5 +17,13 @@
         <module>social-common-sentinel</module>
         <module>social-common-core</module>
         <module>social-common-swagger</module>
+        <module>social-common-log</module>
+        <module>social-common-feign</module>
+        <module>social-common-gray</module>
+        <module>social-common-data</module>
+        <module>social-common-security</module>
+        <module>social-common-gateway</module>
+        <module>social-common-xss</module>
+        <module>social-common-oss</module>
     </modules>
 </project>

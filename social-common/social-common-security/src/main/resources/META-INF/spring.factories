@@ -1,0 +1,8 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.zeryts.c2c.common.security.component.SocialTokenEnhancer,\
+  com.zeryts.c2c.common.security.component.PigxSecurityInnerAspect,\
+  com.zeryts.c2c.common.security.service.PigxUserDetailsServiceImpl,\
+  com.zeryts.c2c.common.security.serializer.PigxTokenStoreAutoConfiguration,\
+  com.zeryts.c2c.common.security.listener.AuthenticationFailureEventListener,\
+  com.zeryts.c2c.common.security.listener.AuthenticationSuccessEventListener
+

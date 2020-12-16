@@ -1,6 +1,6 @@
 package com.zeryts.c2c.visual.monitor.controller;
 
-import cn.agree.amap.common.core.util.R;
+import com.zeryts.c2c.common.core.util.R;
 import com.zeryts.c2c.visual.monitor.service.RedisService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

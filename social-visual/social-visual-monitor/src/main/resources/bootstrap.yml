@@ -16,5 +16,5 @@ spring:
   profiles:
     active: @profiles.active@
   autoconfigure:
-    exclude: cn.agree.amap.common.core.config.JacksonConfig  #排查避免覆盖 Admin Server 内置序列化
+    exclude: com.zeryts.c2c.common.core.config.JacksonConfig  #排查避免覆盖 Admin Server 内置序列化
 

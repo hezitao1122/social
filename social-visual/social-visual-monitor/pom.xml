@@ -10,7 +10,7 @@
 	<artifactId>social-visual-monitor</artifactId>
 	<packaging>jar</packaging>
 
-	<description>social 监控模块，基于 spring boot admin</description>
+	<description>social的服务监控模块，基于 spring boot admin</description>
 
 	<dependencies>
 		<dependency>
