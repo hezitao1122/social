@@ -33,7 +33,7 @@
     </properties>
 
     <modules>
-        <module>social-govern-common</module>
+        <module>social-common</module>
         <module>social-govern-report</module>
         <module>social-govern-reviewer</module>
         <module>social-govern-reviewer-api</module>
