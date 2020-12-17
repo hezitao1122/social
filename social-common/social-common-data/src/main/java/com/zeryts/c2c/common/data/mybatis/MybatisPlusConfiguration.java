@@ -9,9 +9,9 @@ import com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerIntercept
 import com.zeryts.c2c.common.data.datascope.DataScopeHandle;
 import com.zeryts.c2c.common.data.datascope.DataScopeInnerInterceptor;
 import com.zeryts.c2c.common.data.datascope.DataScopeSqlInjector;
-import com.zeryts.c2c.common.data.datascope.PigxDefaultDatascopeHandle;
+import com.zeryts.c2c.common.data.datascope.SocialDefaultDatascopeHandle;
 import com.zeryts.c2c.common.data.resolver.SqlFilterArgumentResolver;
-import com.zeryts.c2c.common.data.tenant.PigxTenantHandler;
+import com.zeryts.c2c.common.data.tenant.SocialTenantHandler;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -49,7 +49,7 @@ public class MybatisPlusConfiguration implements WebMvcConfigurer {
 	@Bean
 	@ConditionalOnMissingBean
 	public DataScopeHandle dataScopeHandle() {
-		return new PigxDefaultDatascopeHandle();
+		return new SocialDefaultDatascopeHandle();
 	}
 
 	/**
@@ -78,8 +78,8 @@ public class MybatisPlusConfiguration implements WebMvcConfigurer {
 	 */
 	@Bean
 	@ConditionalOnMissingBean
-	public PigxTenantHandler pigxTenantHandler() {
-		return new PigxTenantHandler();
+	public SocialTenantHandler pigxTenantHandler() {
+		return new SocialTenantHandler();
 	}
 
 	/**

@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zeryts.c2c.admin.api.dto.UserDTO;
 import com.zeryts.c2c.admin.api.dto.UserInfo;
+import com.zeryts.c2c.admin.api.entity.*;
 import com.zeryts.c2c.admin.api.vo.MenuVO;
 import com.zeryts.c2c.admin.api.vo.UserVO;
 import com.zeryts.c2c.admin.mapper.SysUserMapper;

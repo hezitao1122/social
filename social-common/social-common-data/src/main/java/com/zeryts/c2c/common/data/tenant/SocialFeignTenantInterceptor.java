@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
  * @date 2018/9/14
  */
 @Slf4j
-public class PigxFeignTenantInterceptor implements RequestInterceptor {
+public class SocialFeignTenantInterceptor implements RequestInterceptor {
 
 	@Override
 	public void apply(RequestTemplate requestTemplate) {

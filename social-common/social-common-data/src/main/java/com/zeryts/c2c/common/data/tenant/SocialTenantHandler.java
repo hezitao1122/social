@@ -16,10 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
  * 租户维护处理器
  */
 @Slf4j
-public class PigxTenantHandler implements TenantLineHandler {
+public class SocialTenantHandler implements TenantLineHandler {
 
 	@Autowired
-	private PigxTenantConfigProperties properties;
+	private SocialTenantConfigProperties properties;
 
 	/**
 	 * 获取租户 ID 值表达式，只支持单个 ID 值

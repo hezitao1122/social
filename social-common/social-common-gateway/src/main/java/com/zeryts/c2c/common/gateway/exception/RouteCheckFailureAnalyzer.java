@@ -4,7 +4,7 @@ import org.springframework.boot.diagnostics.AbstractFailureAnalyzer;
 import org.springframework.boot.diagnostics.FailureAnalysis;
 
 /**
- * @author lengleng
+ * @author zeryts
  * @date 2020/11/19
  * <p>
  * 格式化异常信息，方便启动时观察。

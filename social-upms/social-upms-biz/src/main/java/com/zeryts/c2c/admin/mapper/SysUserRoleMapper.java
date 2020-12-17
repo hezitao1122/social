@@ -1,7 +1,7 @@
 package com.zeryts.c2c.admin.mapper;
 
 import com.zeryts.c2c.admin.api.entity.SysUserRole;
-import com.zeryts.c2c.common.data.datascope.PigxBaseMapper;
+import com.zeryts.c2c.common.data.datascope.SocialBaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -14,7 +14,7 @@ import org.apache.ibatis.annotations.Param;
  * @since 2017-10-29
  */
 @Mapper
-public interface SysUserRoleMapper extends PigxBaseMapper<SysUserRole> {
+public interface SysUserRoleMapper extends SocialBaseMapper<SysUserRole> {
 
 	/**
 	 * 根据用户Id删除该用户的角色关系

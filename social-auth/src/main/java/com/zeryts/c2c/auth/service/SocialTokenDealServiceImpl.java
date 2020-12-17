@@ -35,7 +35,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class PigxTokenDealServiceImpl {
+public class SocialTokenDealServiceImpl {
 
 	private final RedisTemplate redisTemplate;
 

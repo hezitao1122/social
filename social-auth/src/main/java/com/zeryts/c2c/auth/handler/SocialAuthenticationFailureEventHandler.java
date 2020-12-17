@@ -43,7 +43,7 @@ import javax.servlet.http.HttpServletResponse;
 @Slf4j
 @Component
 @AllArgsConstructor
-public class PigxAuthenticationFailureEventHandler implements AuthenticationFailureHandler {
+public class SocialAuthenticationFailureEventHandler implements AuthenticationFailureHandler {
 
 	private final RemoteLogService logService;
 

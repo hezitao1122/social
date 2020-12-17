@@ -20,7 +20,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @RequiredArgsConstructor
-public class PigxAuthorizationCodeServicesImpl extends RandomValueAuthorizationCodeServices {
+public class SocialAuthorizationCodeServicesImpl extends RandomValueAuthorizationCodeServices {
 
 	private final RedisConnectionFactory connectionFactory;
 

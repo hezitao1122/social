@@ -18,9 +18,9 @@ import javax.sql.DataSource;
  * 扩展 JdbcClientDetailsService 支持多租户
  */
 @Service
-public class PigxClientDetailsServiceImpl extends JdbcClientDetailsService {
+public class SocialClientDetailsServiceImpl extends JdbcClientDetailsService {
 
-	public PigxClientDetailsServiceImpl(DataSource dataSource) {
+	public SocialClientDetailsServiceImpl(DataSource dataSource) {
 		super(dataSource);
 	}
 

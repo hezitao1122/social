@@ -1,5 +1,3 @@
-
-
 package com.zeryts.c2c.common.oss;
 
 import com.zeryts.c2c.common.oss.http.OssEndpoint;
@@ -13,14 +11,14 @@ import org.springframework.context.annotation.Bean;
 /**
  * aws 自动配置类
  *
- * @author lengleng
+ * @author zeryts
  * @author 858695266
  */
 @AllArgsConstructor
-@EnableConfigurationProperties({ OssProperties.class })
+@EnableConfigurationProperties({ com.zeryts.c2c.common.oss.OssProperties.class })
 public class OssAutoConfiguration {
 
-	private final OssProperties properties;
+	private final com.zeryts.c2c.common.oss.OssProperties properties;
 
 	@Bean
 	@ConditionalOnMissingBean(OssTemplate.class)

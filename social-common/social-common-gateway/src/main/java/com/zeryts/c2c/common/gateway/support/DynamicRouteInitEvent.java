@@ -5,7 +5,7 @@ package com.zeryts.c2c.common.gateway.support;
 import org.springframework.context.ApplicationEvent;
 
 /**
- * @author lengleng
+ * @author zeryts
  * @date 2018/11/5
  * <p>
  * 路由初始化事件

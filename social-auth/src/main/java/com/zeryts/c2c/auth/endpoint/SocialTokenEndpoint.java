@@ -24,7 +24,7 @@ import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zeryts.c2c.admin.api.entity.SysTenant;
 import com.zeryts.c2c.admin.api.feign.RemoteTenantService;
-import com.zeryts.c2c.auth.service.PigxTokenDealServiceImpl;
+import com.zeryts.c2c.auth.service.SocialTokenDealServiceImpl;
 import com.zeryts.c2c.common.core.constant.PaginationConstants;
 import com.zeryts.c2c.common.core.constant.SecurityConstants;
 import com.zeryts.c2c.common.core.util.R;
@@ -53,11 +53,11 @@ import java.util.Map;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/token")
-public class PigxTokenEndpoint {
+public class SocialTokenEndpoint {
 
 	private final ClientDetailsService clientDetailsService;
 
-	private final PigxTokenDealServiceImpl dealService;
+	private final SocialTokenDealServiceImpl dealService;
 
 	private final RemoteTenantService tenantService;
 

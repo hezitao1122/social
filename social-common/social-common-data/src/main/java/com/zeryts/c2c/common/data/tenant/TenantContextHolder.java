@@ -1,5 +1,3 @@
-
-
 package com.zeryts.c2c.common.data.tenant;
 
 import com.alibaba.ttl.TransmittableThreadLocal;

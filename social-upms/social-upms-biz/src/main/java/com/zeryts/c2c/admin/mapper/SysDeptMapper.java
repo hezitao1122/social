@@ -1,7 +1,7 @@
 package com.zeryts.c2c.admin.mapper;
 
 import com.zeryts.c2c.admin.api.entity.SysDept;
-import com.zeryts.c2c.common.data.datascope.PigxBaseMapper;
+import com.zeryts.c2c.common.data.datascope.SocialBaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -13,6 +13,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @since 2018-01-20
  */
 @Mapper
-public interface SysDeptMapper extends PigxBaseMapper<SysDept> {
+public interface SysDeptMapper extends SocialBaseMapper<SysDept> {
 
 }

@@ -22,7 +22,7 @@ import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
- * @author lengleng
+ * @author zeryts
  * @date 2018/11/5
  * <p>
  * 动态路由配置类

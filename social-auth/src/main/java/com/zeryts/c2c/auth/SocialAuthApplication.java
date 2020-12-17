@@ -29,10 +29,10 @@ import org.springframework.cloud.client.SpringCloudApplication;
  */
 @SpringCloudApplication
 @EnablePigxFeignClients
-public class PigxAuthApplication {
+public class SocialAuthApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PigxAuthApplication.class, args);
+		SpringApplication.run(SocialAuthApplication.class, args);
 	}
 
 }

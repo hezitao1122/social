@@ -1,7 +1,7 @@
 package com.zeryts.c2c.common.gateway.exception;
 
 /**
- * @author lengleng
+ * @author zeryts
  * @date 2020/11/19
  */
 public class RouteCheckException extends RuntimeException {

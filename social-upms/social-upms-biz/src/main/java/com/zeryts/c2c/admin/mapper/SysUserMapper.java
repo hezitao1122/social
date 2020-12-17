@@ -6,7 +6,7 @@ import com.zeryts.c2c.admin.api.dto.UserDTO;
 import com.zeryts.c2c.admin.api.entity.SysUser;
 import com.zeryts.c2c.admin.api.vo.UserVO;
 import com.zeryts.c2c.common.data.datascope.DataScope;
-import com.zeryts.c2c.common.data.datascope.PigxBaseMapper;
+import com.zeryts.c2c.common.data.datascope.SocialBaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -21,7 +21,7 @@ import java.util.List;
  * @since 2017-10-29
  */
 @Mapper
-public interface SysUserMapper extends PigxBaseMapper<SysUser> {
+public interface SysUserMapper extends SocialBaseMapper<SysUser> {
 
 	/**
 	 * 通过用户名查询用户信息（含有角色信息）

@@ -40,7 +40,7 @@ import javax.servlet.http.HttpServletResponse;
 @Slf4j
 @Component
 @AllArgsConstructor
-public class PigxAuthenticationSuccessEventHandler implements AuthenticationSuccessHandler {
+public class SocialAuthenticationSuccessEventHandler implements AuthenticationSuccessHandler {
 
 	private final RemoteLogService logService;
 

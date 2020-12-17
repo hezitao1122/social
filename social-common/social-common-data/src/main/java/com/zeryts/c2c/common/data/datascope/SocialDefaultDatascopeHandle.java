@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
  * <p>
  * 默认data scope 判断处理器
  */
-public class PigxDefaultDatascopeHandle implements DataScopeHandle {
+public class SocialDefaultDatascopeHandle implements DataScopeHandle {
 
 	@Autowired
 	private RemoteDataScopeService dataScopeService;

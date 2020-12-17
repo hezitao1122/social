@@ -20,4 +20,21 @@
 		<module>social-govern-reviewer-api</module>
 		<module>social-govern-reward-api</module>
 	</modules>
+	<dependencies>
+		<!-- dubbo的服务 -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-dubbo</artifactId>
+		</dependency>
+		<!-- sentinel相关依赖 -->
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-core</artifactId>
+			<version>${sentinel.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+		</dependency>
+	</dependencies>
 </project>

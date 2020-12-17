@@ -2,7 +2,7 @@ package com.zeryts.c2c.admin.mapper;
 
 import com.zeryts.c2c.admin.api.entity.SysMenu;
 import com.zeryts.c2c.admin.api.vo.MenuVO;
-import com.zeryts.c2c.common.data.datascope.PigxBaseMapper;
+import com.zeryts.c2c.common.data.datascope.SocialBaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.List;
  * @since 2017-10-29
  */
 @Mapper
-public interface SysMenuMapper extends PigxBaseMapper<SysMenu> {
+public interface SysMenuMapper extends SocialBaseMapper<SysMenu> {
 
 	/**
 	 * 通过角色编号查询菜单

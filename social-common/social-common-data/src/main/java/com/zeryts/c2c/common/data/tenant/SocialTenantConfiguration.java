@@ -14,11 +14,11 @@ import org.springframework.http.client.ClientHttpRequestInterceptor;
  * 租户信息拦截
  */
 @Configuration
-public class PigxTenantConfiguration {
+public class SocialTenantConfiguration {
 
 	@Bean
 	public RequestInterceptor pigxFeignTenantInterceptor() {
-		return new PigxFeignTenantInterceptor();
+		return new SocialFeignTenantInterceptor();
 	}
 
 	@Bean

@@ -17,7 +17,7 @@ import java.util.List;
 @RefreshScope
 @Configuration
 @ConfigurationProperties(prefix = "pigx.tenant")
-public class PigxTenantConfigProperties {
+public class SocialTenantConfigProperties {
 
 	/**
 	 * 维护租户列名称

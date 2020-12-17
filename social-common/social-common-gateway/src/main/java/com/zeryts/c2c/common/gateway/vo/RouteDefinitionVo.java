@@ -9,7 +9,7 @@ import org.springframework.cloud.gateway.route.RouteDefinition;
 import java.io.Serializable;
 
 /**
- * @author lengleng
+ * @author zeryts
  * @date 2018/10/31
  * <p>
  * 扩展此类支持序列化a See RouteDefinition.class

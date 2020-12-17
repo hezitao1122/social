@@ -14,7 +14,7 @@ import java.util.List;
  * @author zeryts
  * @date 2020-06-17
  */
-public interface PigxBaseMapper<T> extends BaseMapper<T> {
+public interface SocialBaseMapper<T> extends BaseMapper<T> {
 
 	/**
 	 * 根据 entity 条件，查询全部记录

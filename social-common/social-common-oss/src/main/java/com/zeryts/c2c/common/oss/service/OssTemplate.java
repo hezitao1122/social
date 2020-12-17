@@ -25,7 +25,7 @@ import java.util.*;
 /**
  * aws-s3 通用存储操作 支持所有兼容s3协议的云存储: {阿里云OSS，腾讯云COS，七牛云，京东云，minio 等}
  *
- * @author lengleng
+ * @author zeryts
  * @author 858695266
  * @date 2020/5/23 6:36 上午
  * @since 1.0

@@ -1,7 +1,7 @@
 package com.zeryts.c2c.admin.mapper;
 
 import com.zeryts.c2c.admin.api.entity.SysRoleMenu;
-import com.zeryts.c2c.common.data.datascope.PigxBaseMapper;
+import com.zeryts.c2c.common.data.datascope.SocialBaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -13,6 +13,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @since 2017-10-29
  */
 @Mapper
-public interface SysRoleMenuMapper extends PigxBaseMapper<SysRoleMenu> {
+public interface SysRoleMenuMapper extends SocialBaseMapper<SysRoleMenu> {
 
 }
