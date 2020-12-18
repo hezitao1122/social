@@ -12,9 +12,14 @@
 	<artifactId>social-common-oss</artifactId>
 	<packaging>jar</packaging>
 
-	<description>pigx 文件系统依赖</description>
+	<description>social 文件系统依赖</description>
 
 	<dependencies>
+		<!--web 模块-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-java-sdk-s3</artifactId>

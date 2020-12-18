@@ -18,6 +18,6 @@ import java.lang.annotation.*;
 @Documented
 @Inherited
 @Import(DynamicRouteAutoConfiguration.class)
-public @interface EnablePigxDynamicRoute {
+public @interface EnableSocialDynamicRoute {
 
 }
