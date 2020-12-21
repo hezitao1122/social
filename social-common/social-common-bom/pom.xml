@@ -14,7 +14,7 @@
     <artifactId>social-common-bom</artifactId>
     <packaging>pom</packaging>
     <version>${project.version}</version>
-    <description>c2c-social-govern 公共版本控制</description>
+    <description>social-common 公共版本控制</description>
 
 
     <properties>
