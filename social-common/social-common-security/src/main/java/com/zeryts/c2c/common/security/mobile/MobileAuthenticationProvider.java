@@ -2,7 +2,7 @@
 
 package com.zeryts.c2c.common.security.mobile;
 
-import com.zeryts.c2c.common.security.component.PigxPreAuthenticationChecks;
+import com.zeryts.c2c.common.security.component.SocialPreAuthenticationChecks;
 import com.zeryts.c2c.common.security.service.PigxUserDetailsService;
 import com.zeryts.c2c.common.security.util.PigxSecurityMessageSourceUtil;
 import lombok.Getter;
@@ -25,7 +25,7 @@ public class MobileAuthenticationProvider implements AuthenticationProvider {
 
 	private MessageSourceAccessor messages = PigxSecurityMessageSourceUtil.getAccessor();
 
-	private UserDetailsChecker detailsChecker = new PigxPreAuthenticationChecks();
+	private UserDetailsChecker detailsChecker = new SocialPreAuthenticationChecks();
 
 	@Getter
 	@Setter

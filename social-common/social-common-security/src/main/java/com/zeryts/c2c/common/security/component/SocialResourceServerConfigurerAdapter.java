@@ -10,20 +10,26 @@ import org.springframework.security.config.annotation.web.configurers.Expression
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.authentication.TokenExtractor;
-import org.springframework.security.oauth2.provider.token.ResourceServerTokenServices;
+import org.springframework.security.oauth2.provider.token.DefaultAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.RemoteTokenServices;
+import org.springframework.security.oauth2.provider.token.UserAuthenticationConverter;
 import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * @author zeryts
- * @date 2020/9/30
+ * @date 2018/6/22
  * <p>
- * 支持本地模式 [不仅过认证中 CheckToken]的的资源服务器配置
+ * 1. 支持remoteTokenServices 负载均衡 2. 支持 获取用户全部信息
  */
 @Slf4j
-public class PigxLocalResourceServerConfigurerAdapter extends ResourceServerConfigurerAdapter {
+public class SocialResourceServerConfigurerAdapter extends ResourceServerConfigurerAdapter {
 
 	@Autowired
 	protected AuthenticationEntryPoint resourceAuthExceptionEntryPoint;
+
+	@Autowired
+	protected RemoteTokenServices remoteTokenServices;
 
 	@Autowired
 	private PermitAllUrlResolver permitAllUrlResolver;
@@ -32,7 +38,7 @@ public class PigxLocalResourceServerConfigurerAdapter extends ResourceServerConf
 	private TokenExtractor tokenExtractor;
 
 	@Autowired
-	private ResourceServerTokenServices resourceServerTokenServices;
+	private RestTemplate lbRestTemplate;
 
 	/**
 	 * 默认的配置，对外暴露
@@ -52,8 +58,14 @@ public class PigxLocalResourceServerConfigurerAdapter extends ResourceServerConf
 
 	@Override
 	public void configure(ResourceServerSecurityConfigurer resources) {
+		DefaultAccessTokenConverter accessTokenConverter = new DefaultAccessTokenConverter();
+		UserAuthenticationConverter userTokenConverter = new SocialUserAuthenticationConverter();
+		accessTokenConverter.setUserTokenConverter(userTokenConverter);
+
+		remoteTokenServices.setRestTemplate(lbRestTemplate);
+		remoteTokenServices.setAccessTokenConverter(accessTokenConverter);
 		resources.authenticationEntryPoint(resourceAuthExceptionEntryPoint).tokenExtractor(tokenExtractor)
-				.tokenServices(resourceServerTokenServices);
+				.tokenServices(remoteTokenServices);
 	}
 
 }

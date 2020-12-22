@@ -16,7 +16,7 @@ import org.springframework.security.core.userdetails.UserDetailsChecker;
  * @date 2019-01-02
  */
 @Slf4j
-public class PigxPreAuthenticationChecks implements UserDetailsChecker {
+public class SocialPreAuthenticationChecks implements UserDetailsChecker {
 
 	private MessageSourceAccessor messages = PigxSecurityMessageSourceUtil.getAccessor();
 

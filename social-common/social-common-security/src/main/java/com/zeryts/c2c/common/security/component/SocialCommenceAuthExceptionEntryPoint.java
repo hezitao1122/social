@@ -32,7 +32,7 @@ import java.io.PrintWriter;
 @Slf4j
 @Component
 @AllArgsConstructor
-public class PigxCommenceAuthExceptionEntryPoint implements AuthenticationEntryPoint {
+public class SocialCommenceAuthExceptionEntryPoint implements AuthenticationEntryPoint {
 
 	private final ObjectMapper objectMapper;
 

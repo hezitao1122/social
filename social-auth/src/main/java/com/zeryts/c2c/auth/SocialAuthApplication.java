@@ -19,7 +19,7 @@
 
 package com.zeryts.c2c.auth;
 
-import com.zeryts.c2c.common.feign.annotation.EnablePigxFeignClients;
+import com.zeryts.c2c.common.feign.annotation.EnableSocialFeignClients;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 
@@ -28,7 +28,7 @@ import org.springframework.cloud.client.SpringCloudApplication;
  * @date 2020-02-08 认证授权中心
  */
 @SpringCloudApplication
-@EnablePigxFeignClients
+@EnableSocialFeignClients
 public class SocialAuthApplication {
 
 	public static void main(String[] args) {

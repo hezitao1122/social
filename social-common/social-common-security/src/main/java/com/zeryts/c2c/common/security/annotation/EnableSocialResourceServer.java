@@ -2,8 +2,8 @@
 
 package com.zeryts.c2c.common.security.annotation;
 
-import com.zeryts.c2c.common.security.component.PigxResourceServerAutoConfiguration;
-import com.zeryts.c2c.common.security.component.PigxSecurityBeanDefinitionRegistrar;
+import com.zeryts.c2c.common.security.component.SocialResourceServerAutoConfiguration;
+import com.zeryts.c2c.common.security.component.SocialSecurityBeanDefinitionRegistrar;
 import org.springframework.context.annotation.Import;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
@@ -22,8 +22,8 @@ import java.lang.annotation.*;
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-@Import({ PigxResourceServerAutoConfiguration.class, PigxSecurityBeanDefinitionRegistrar.class })
-public @interface EnablePigxResourceServer {
+@Import({ SocialResourceServerAutoConfiguration.class, SocialSecurityBeanDefinitionRegistrar.class })
+public @interface EnableSocialResourceServer {
 
 	/**
 	 * 是否开启本地模式

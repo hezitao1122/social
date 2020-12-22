@@ -3,7 +3,7 @@
 package com.zeryts.c2c.common.security.mobile;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.zeryts.c2c.common.security.component.PigxCommenceAuthExceptionEntryPoint;
+import com.zeryts.c2c.common.security.component.SocialCommenceAuthExceptionEntryPoint;
 import com.zeryts.c2c.common.security.service.PigxUserDetailsService;
 import lombok.Getter;
 import lombok.Setter;
@@ -42,7 +42,7 @@ public class MobileSecurityConfigurer extends SecurityConfigurerAdapter<DefaultS
 		mobileAuthenticationFilter.setAuthenticationManager(http.getSharedObject(AuthenticationManager.class));
 		mobileAuthenticationFilter.setAuthenticationSuccessHandler(mobileLoginSuccessHandler);
 		mobileAuthenticationFilter.setEventPublisher(defaultAuthenticationEventPublisher);
-		mobileAuthenticationFilter.setAuthenticationEntryPoint(new PigxCommenceAuthExceptionEntryPoint(objectMapper));
+		mobileAuthenticationFilter.setAuthenticationEntryPoint(new SocialCommenceAuthExceptionEntryPoint(objectMapper));
 
 		MobileAuthenticationProvider mobileAuthenticationProvider = new MobileAuthenticationProvider();
 		mobileAuthenticationProvider.setUserDetailsService(userDetailsService);

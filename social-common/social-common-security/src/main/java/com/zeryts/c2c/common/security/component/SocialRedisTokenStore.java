@@ -30,7 +30,7 @@ import java.util.*;
  * @link https://github.com/spring-projects/spring-security-oauth/pull/1660
  * 重写RedisTokenStore ,主要解决 #1814 oauth2中client_id_to_access数据膨胀问题
  */
-public class PigxRedisTokenStore implements TokenStore {
+public class SocialRedisTokenStore implements TokenStore {
 
 	private static final String ACCESS = "access:";
 
@@ -64,7 +64,7 @@ public class PigxRedisTokenStore implements TokenStore {
 
 	private Method redisConnectionSet_2_0;
 
-	public PigxRedisTokenStore(RedisConnectionFactory connectionFactory, KeyStrResolver resolver) {
+	public SocialRedisTokenStore(RedisConnectionFactory connectionFactory, KeyStrResolver resolver) {
 		this.keyStrResolver = resolver;
 		this.connectionFactory = connectionFactory;
 		if (springDataRedis_2_0) {

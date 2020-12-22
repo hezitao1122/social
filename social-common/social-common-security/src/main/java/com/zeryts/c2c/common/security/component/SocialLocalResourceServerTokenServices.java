@@ -23,7 +23,7 @@ import org.springframework.stereotype.Service;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class PigxLocalResourceServerTokenServices implements ResourceServerTokenServices {
+public class SocialLocalResourceServerTokenServices implements ResourceServerTokenServices {
 
 	private final TokenStore tokenStore;
 

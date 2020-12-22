@@ -26,7 +26,7 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 @Aspect
 @AllArgsConstructor
-public class PigxSecurityInnerAspect {
+public class SocialSecurityInnerAspect {
 
 	private final HttpServletRequest request;
 

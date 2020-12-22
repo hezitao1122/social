@@ -3,7 +3,7 @@ package com.zeryts.c2c.common.security.serializer;
 import cn.hutool.core.util.StrUtil;
 import com.zeryts.c2c.common.core.constant.SecurityConstants;
 import com.zeryts.c2c.common.core.util.KeyStrResolver;
-import com.zeryts.c2c.common.security.component.PigxRedisTokenStore;
+import com.zeryts.c2c.common.security.component.SocialRedisTokenStore;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,7 +28,7 @@ public class PigxTokenStoreAutoConfiguration {
 
 	@Bean
 	public TokenStore tokenStore() {
-		PigxRedisTokenStore tokenStore = new PigxRedisTokenStore(connectionFactory, resolver);
+		SocialRedisTokenStore tokenStore = new SocialRedisTokenStore(connectionFactory, resolver);
 		if (SecurityConstants.JSON_FORMAT) {
 			tokenStore.setSerializationStrategy(new JacksonRedisTokenStoreSerializationStrategy());
 		}

@@ -1,7 +1,7 @@
 package com.zeryts.c2c.admin;
 
-import com.zeryts.c2c.common.feign.annotation.EnablePigxFeignClients;
-import com.zeryts.c2c.common.security.annotation.EnablePigxResourceServer;
+import com.zeryts.c2c.common.feign.annotation.EnableSocialFeignClients;
+import com.zeryts.c2c.common.security.annotation.EnableSocialResourceServer;
 import com.zeryts.c2c.common.swagger.annotation.EnableSocialSwagger2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
@@ -14,8 +14,8 @@ import org.springframework.cloud.client.SpringCloudApplication;
  */
 @EnableSocialSwagger2
 @SpringCloudApplication
-@EnablePigxFeignClients
-@EnablePigxResourceServer
+@EnableSocialFeignClients
+@EnableSocialResourceServer
 public class PigxAdminApplication {
 
 	public static void main(String[] args) {

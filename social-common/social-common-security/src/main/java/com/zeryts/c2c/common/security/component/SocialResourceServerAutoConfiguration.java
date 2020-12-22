@@ -21,7 +21,7 @@ import java.util.Map;
  * @date 2018/11/10
  */
 @ComponentScan("com.zeryts.c2c.common.security")
-public class PigxResourceServerAutoConfiguration implements ApplicationContextAware {
+public class SocialResourceServerAutoConfiguration implements ApplicationContextAware {
 
 	private ApplicationContext applicationContext;
 

@@ -20,8 +20,8 @@
 package com.zeryts.c2c.auth.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.zeryts.c2c.common.security.component.PigxCommenceAuthExceptionEntryPoint;
-import com.zeryts.c2c.common.security.component.PigxWebResponseExceptionTranslator;
+import com.zeryts.c2c.common.security.component.SocialCommenceAuthExceptionEntryPoint;
+import com.zeryts.c2c.common.security.component.SocialWebResponseExceptionTranslator;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.context.annotation.Configuration;
@@ -70,7 +70,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Override
 	public void configure(AuthorizationServerSecurityConfigurer oauthServer) {
 		oauthServer.allowFormAuthenticationForClients()
-				.authenticationEntryPoint(new PigxCommenceAuthExceptionEntryPoint(objectMapper))
+				.authenticationEntryPoint(new SocialCommenceAuthExceptionEntryPoint(objectMapper))
 				.checkTokenAccess("isAuthenticated()");
 	}
 
@@ -80,7 +80,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 				.tokenEnhancer(tokenEnhancer).userDetailsService(pigxUserDetailsService)
 				.authorizationCodeServices(authorizationCodeServices).authenticationManager(authenticationManagerBean)
 				.reuseRefreshTokens(false).pathMapping("/oauth/confirm_access", "/token/confirm_access")
-				.exceptionTranslator(new PigxWebResponseExceptionTranslator());
+				.exceptionTranslator(new SocialWebResponseExceptionTranslator());
 	}
 
 }
