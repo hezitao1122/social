@@ -1,22 +1,3 @@
-/*
- *
- *      Copyright (c) 2018-2025, zeryts All rights reserved.
- *
- *  Redistribution and use in source and binary forms, with or without
- *  modification, are permitted provided that the following conditions are met:
- *
- * Redistributions of source code must retain the above copyright notice,
- *  this list of conditions and the following disclaimer.
- *  Redistributions in binary form must reproduce the above copyright
- *  notice, this list of conditions and the following disclaimer in the
- *  documentation and/or other materials provided with the distribution.
- *  Neither the name of the pig4cloud.com developer nor the names of its
- *  contributors may be used to endorse or promote products derived from
- *  this software without specific prior written permission.
- *  Author: zeryts (wangiegie@gmail.com)
- *
- */
-
 package com.zeryts.c2c.auth.endpoint;
 
 import cn.hutool.core.map.MapUtil;
@@ -25,7 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zeryts.c2c.admin.api.entity.SysTenant;
 import com.zeryts.c2c.admin.api.feign.RemoteTenantService;
 import com.zeryts.c2c.auth.service.SocialTokenDealServiceImpl;
-import com.zeryts.c2c.common.core.constant.PaginationConstants;
+import com.zeryts.c2c.common.core.constant.SocialinationConstants;
 import com.zeryts.c2c.common.core.constant.SecurityConstants;
 import com.zeryts.c2c.common.core.util.R;
 import com.zeryts.c2c.common.security.annotation.Inner;
@@ -133,8 +114,8 @@ public class SocialTokenEndpoint {
 	@Inner
 	@PostMapping("/page")
 	public R<Page> tokenList(@RequestBody Map<String, Object> params) {
-		Page result = new Page(MapUtil.getInt(params, PaginationConstants.CURRENT),
-				MapUtil.getInt(params, PaginationConstants.SIZE));
+		Page result = new Page(MapUtil.getInt(params, SocialinationConstants.CURRENT),
+				MapUtil.getInt(params, SocialinationConstants.SIZE));
 
 		// 根据username 查询 token 列表
 		Object username = params.get("username");

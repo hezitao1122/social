@@ -6,7 +6,7 @@ package com.zeryts.c2c.common.core.constant;
  * @author lishangbu
  * @date 2018/11/22
  */
-public interface PaginationConstants {
+public interface SocialinationConstants {
 
 	/**
 	 * 当前页
