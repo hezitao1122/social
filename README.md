@@ -56,7 +56,15 @@
    配置了swagger的初始化信息.测试环境可以使用,但是生辰环境得关闭  
    基于swagger2
 #### 12.social-common-xss
-   配置了一些安全过滤插件 基于 JSOUP         
+   配置了一些安全过滤插件 基于 JSOUP    
+### 三、social-goven
+   存放的为社会治理平台项目,技术栈主要为spring-alibaba
+   注册中心和配置中心使用的为nacos
+   RPC框架使用的为dubbo
+   分布式事务使用的为seata
+   数据源使用的为druid
+   限流熔断组件使用的为sentinel
+   流控的监控平台在social-visual之中     
    
    
       
