@@ -1,5 +1,7 @@
 package com.zeryts.c2c.social.govern.report.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.zeryts.c2c.common.core.util.Result;
 import com.zeryts.c2c.social.govern.report.domain.ReportTask;
 import com.zeryts.c2c.social.govern.report.domain.ReportTaskVote;
@@ -11,7 +13,10 @@ import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @description: 举报任务的controller层
@@ -89,5 +94,4 @@ public class ReportTaskController {
 
         return result.suc().setData(vote);
     }
-
 }

@@ -261,6 +261,12 @@
                 <scope>import</scope>
             </dependency>
 
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-client</artifactId>
+                <version>4.8.0</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>com.zeryts.c2c</groupId>
